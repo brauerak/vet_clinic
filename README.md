@@ -1,7 +1,11 @@
-Komendy do wpisania: 
+Komendy do wpisania:
+
 cd my-app
+
 npm install react-router-dom 
+
 npm install --save styled-components 
+
 npm install @mui/material @emotion/react @emotion/styled
 
 npm start
