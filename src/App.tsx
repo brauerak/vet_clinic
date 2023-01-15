@@ -11,7 +11,7 @@ const App: React.FC = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<MainView />}>
-          <Route index element={<HomeView />}></Route>
+          <Route index path='home' element={<HomeView />}></Route>
           <Route path="appointments" element={<AppointmentsView />}></Route>
           <Route path="contact" element={<ContactView />}></Route>
           <Route path="*" element={<NotFound />} />
