@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<MainView />}>
+        <Route path="" element={<MainView />}>
           <Route index path='home' element={<HomeView />}></Route>
           <Route path="appointments" element={<AppointmentsView />}></Route>
           <Route path="contact" element={<ContactView />}></Route>
