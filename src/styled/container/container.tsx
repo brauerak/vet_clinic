@@ -8,7 +8,8 @@ export const Container = styled.div<ContainerProps>`
     display: flex;
     flex-flow: ${(props) => `${props.direction}`} nowrap;
     height: 80vh;
-    background-color: #cac8c8;
+    background-color: white;
+    color: black
     
 `;
 
