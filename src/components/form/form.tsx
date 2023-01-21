@@ -69,41 +69,43 @@ const Form: React.FC = () => {
             />
             <p>{errors.surname?.message}</p>
           </div>
-
-          <label htmlFor="petsName"></label>
-          <input
-            id="petsName"
-            type="text"
-            placeholder="Imię zwierzęcia"
-            {...register("petsName", {
-              required: {
-                value: true,
-                message: "Imię jest wymagane",
-              },
-              minLength: {
-                value: 3,
-                message: "Długość imienia zwierzęcia musi mieć ponad 3 znaki",
-              },
-              maxLength: {
-                value: 15,
-                message:
-                  "Długość imienia zwierzęcia musi mieć poniżej 15 znaków",
-              },
-            })}
-          />
-          <p>{errors.petsName?.message}</p>
-          <label htmlFor="date"></label>
-          <input
-            type="date"
-            id="date"
-            {...register("date", {
-              required: {
-                value: true,
-                message: "Data jest wymagana",
-              },
-            })}
-          />
-          <p>{errors.date?.message}</p>
+        
+          <div>
+              <label htmlFor="petsName"></label>
+              <input
+                id="petsName"
+                type="text"
+                placeholder="Imię zwierzęcia"
+                {...register("petsName", {
+                  required: {
+                    value: true,
+                    message: "Imię jest wymagane",
+                  },
+                  minLength: {
+                    value: 3,
+                    message: "Długość imienia zwierzęcia musi mieć ponad 3 znaki",
+                  },
+                  maxLength: {
+                    value: 15,
+                    message:
+                      "Długość imienia zwierzęcia musi mieć poniżej 15 znaków",
+                  },
+                })}
+              />
+              <p>{errors.petsName?.message}</p>
+              <label htmlFor="date"></label>
+              <input
+                type="date"
+                id="date"
+                {...register("date", {
+                  required: {
+                    value: true,
+                    message: "Data jest wymagana",
+                  },
+                })}
+              />
+              <p>{errors.date?.message}</p>
+          </div>
 
           <div>
             <label htmlFor="phoneNumber"></label>
