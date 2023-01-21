@@ -17,7 +17,7 @@ import { StyledLink } from '../link/link';
 
 const pages = [ {
     label: 'Home',
-    path: '/home',
+    path: '/',
     id: 1
 },{
     label: 'Appointments',
@@ -114,7 +114,7 @@ const ResponsiveAppBar: React.FC = () => {
             variant="h5"
             noWrap
             component="a"
-            href="home"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
