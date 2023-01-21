@@ -10,8 +10,8 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="" element={<MainView />}>
-          <Route index path='home' element={<HomeView />}></Route>
+        <Route  element={<MainView />}>
+          <Route index path= "" element={<HomeView />}></Route>
           <Route path="appointments" element={<AppointmentsView />}></Route>
           <Route path="contact" element={<ContactView />}></Route>
           <Route path="*" element={<NotFound />} />
