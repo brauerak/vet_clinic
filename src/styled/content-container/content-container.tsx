@@ -10,6 +10,6 @@ const ContentContainer: React.FC = () => {
 export default ContentContainer
 
 
-// Utworzyć osobny folder z treścią jako const content = [{}] i załączyć go do ContentContainer wzorując się na 106-108 app-bar.tsx
+// Utworzyć osobny folder z treścią jako const content = [{}] i załączyć go do ContentContainer wzorując się na 106-108 app-bar.tsx lub firebase 
 
 // To samo zrobić z Footer lub zakodować jego treść na sztywno.
