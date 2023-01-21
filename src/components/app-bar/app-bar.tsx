@@ -51,7 +51,7 @@ const ResponsiveAppBar: React.FC = () => {
 
 
   return (
-    <AppBar position="static" style={{backgroundColor:'green'}}>
+    <AppBar position="sticky" style={{backgroundColor:'rgba(178, 223, 219, 0.823)'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <PetsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
