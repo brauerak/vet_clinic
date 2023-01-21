@@ -9,10 +9,6 @@ const MainView: React.FC = () => {
   return <>
     <ResponsiveAppBar/>
     <Container direction="column">
-    <PhotoContainer direction="column" url="https://i.pinimg.com/564x/c6/ad/fc/c6adfcce6f3c25bb55ab0c071188d8fd.jpg">
-       {/* <h2 className="vetClinicLogo">VetClinic</h2> */}
-       <h5 className="vetClinicLogo"> Całodobowa Klinika Weterynaryjna</h5>
-    </PhotoContainer>
     <Outlet />
     </Container>
     <Footer direction = 'row'>
