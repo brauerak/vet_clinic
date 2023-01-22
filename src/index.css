@@ -19,25 +19,21 @@ code {
   letter-spacing: 3px;
 }
 
-.center {
-  top: 100%;
-  left: 100%;
-  background-color: blue;
-}
-
-.name,
+/* .name,
 .surname {
   display: inline-block;
-  margin-top: 10px;
-  margin-right: 30px;
-}
+} */
 
-.petsEmail {
-  display: flex;
-}
 
-form {
-  height: 50%;
+.form {
+  height: 100%;
   width: 50%;
-  background-color: blueviolet;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  left: 25%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
+
