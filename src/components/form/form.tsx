@@ -21,8 +21,7 @@ const Form: React.FC = () => {
 
   return (
     <>
-      <div className="center">
-        <form noValidate onSubmit={handleSubmit(onSubmit)}>
+        <form className="form" noValidate onSubmit={handleSubmit(onSubmit)}>
           <div className="name">
             <label htmlFor="name"></label>
             <input
@@ -93,6 +92,8 @@ const Form: React.FC = () => {
                 })}
               />
               <p>{errors.petsName?.message}</p>
+              </div>
+              <div>
               <label htmlFor="date"></label>
               <input
                 type="date"
@@ -121,6 +122,9 @@ const Form: React.FC = () => {
               })}
             />
             <p>{errors.phoneNumber?.message}</p>
+            </div>
+            
+            <div>  
             <label htmlFor="email"></label>
             <input
               id="email"
@@ -152,7 +156,6 @@ const Form: React.FC = () => {
             <button type="submit">Wyślij</button>
           </div>
         </form>
-      </div>
     </>
   );
 };
