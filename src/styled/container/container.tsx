@@ -7,7 +7,7 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
     display: flex;
     flex-flow: ${(props) => `${props.direction}`} nowrap;
-    height: 80vh;
+    height: 100vh;
     background-color: white;
     color: black
     

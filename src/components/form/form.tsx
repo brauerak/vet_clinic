@@ -6,7 +6,7 @@ interface FormData {
   surname: string;
   petsName: string;
   email: string;
-  phoneNumber: number;
+  phoneNumber: string;
   info: string;
   date: string | number;
 }
@@ -21,7 +21,7 @@ const Form: React.FC = () => {
 
   return (
     <>
-        <form className="form" noValidate onSubmit={handleSubmit(onSubmit)}>
+        <form id="formId" className="form" noValidate onSubmit={handleSubmit(onSubmit)}>
           <div className="name">
             <label htmlFor="name"></label>
             <input
@@ -43,7 +43,7 @@ const Form: React.FC = () => {
                 },
               })}
             />
-            <p>{errors.name?.message}</p>
+            {errors.name?.message}
           </div>
           <div className="surname">
             <label htmlFor="surname"></label>
@@ -114,11 +114,26 @@ const Form: React.FC = () => {
               id="phoneNumber"
               type="text"
               placeholder="Numer kom."
+              
               {...register("phoneNumber", {
                 required: {
                   value: true,
                   message: "Numer telefonu jest wymagany",
                 },
+                validate: {
+                  phoneNumberValidation: (value)  => {
+                    const phoneNumberFormat =/^(\d{3})(\d{3})(\d{3})$/;
+                    const prefixNumberFormat =/^(\d{2})(\d{3})(\d{3})(\d{3})$/;
+                    if (value.match(phoneNumberFormat))
+                    {
+                      return (true)
+                    } else if (value.match(prefixNumberFormat))
+                    {
+                      return (true)
+                    }
+                      alert("Numer telefonu jest nieprawidłowy")
+                      return (false)
+                  }}
               })}
             />
             <p>{errors.phoneNumber?.message}</p>
@@ -135,6 +150,17 @@ const Form: React.FC = () => {
                   value: true,
                   message: "E-mail jest wymagany",
                 },
+                validate: {
+                  emailValidation: (value)  => {
+                    const mailFormat =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                    if (value.match(mailFormat))
+                    {
+                      return (true)
+                    }
+                      alert("Adres email jest nieprawidłowy")
+                      return (false)
+                  }
+                }
               })}
             />
             <p>{errors.email?.message}</p>

@@ -19,14 +19,8 @@ code {
   letter-spacing: 3px;
 }
 
-/* .name,
-.surname {
-  display: inline-block;
-} */
-
-
 .form {
-  height: 100%;
+  height: 1000px;
   width: 50%;
   display: grid;
   align-items: center;
@@ -36,4 +30,13 @@ code {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+.form input {
+  height: 30px;
+  border-radius: 5%;
+  border-style: solid;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
 

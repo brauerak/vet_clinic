@@ -14,7 +14,7 @@ export const PhotoContainer = styled.div<ContainerProps>`
     color: white;
     font-size: 30px;
     font-weight: bold;
-    height: 300px;
+    height: 700px;
     margin-right: 0px;
     width: 100%;
     background-image: url(${(props) => `${props.url}`});
@@ -22,6 +22,7 @@ export const PhotoContainer = styled.div<ContainerProps>`
     background-size: 100%;
     background-position: center;
     opacity: 0.8;
+    
 
     `
     ;
