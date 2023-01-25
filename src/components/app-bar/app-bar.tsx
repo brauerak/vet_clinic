@@ -51,7 +51,7 @@ const ResponsiveAppBar: React.FC = () => {
 
 
   return (
-    <AppBar position="sticky" style={{backgroundColor:'rgba(178, 223, 219, 0.823)'}}>
+    <AppBar position="sticky" style={{backgroundColor:'#00000060'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <PetsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -64,9 +64,9 @@ const ResponsiveAppBar: React.FC = () => {
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
-              fontWeight: 700,
+              fontWeight: 300,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'white',
               textDecoration: 'none',
             }}
           >
@@ -120,7 +120,7 @@ const ResponsiveAppBar: React.FC = () => {
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'monospace',
-              fontWeight: 700,
+              fontWeight: 300,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
