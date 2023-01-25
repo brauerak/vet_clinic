@@ -1,10 +1,16 @@
 import styled from "@emotion/styled";
 
-export const Content = styled.div`
+interface ContentProps {
+    marginTop: string,
+    marginBottom: string,
+}
+
+export const Content = styled.div<ContentProps>`
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px;
-    font-size: 2rem;
-    font-weight: 700;
-`
+    color: inherit;
+    margin-top: ${(props)=> `${props.marginTop}`};
+    margin-bottom: ${(props)=> `${props.marginBottom}`}
+  `
