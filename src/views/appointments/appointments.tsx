@@ -1,11 +1,24 @@
+import { Typography } from "@mui/material"
 import Form from "../../components/form/form"
+import Logo from "../../components/logo/logo"
+import BootstrapButton from "../../styled/buttons/btn-boostrap"
+import { Content } from "../../styled/content/content"
 import { PhotoContainer } from "../../styled/photo-container/photo-container"
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const AppointmentsView: React.FC = () => {
     return <>
-        <PhotoContainer direction="column" url="https://i.pinimg.com/564x/32/70/b0/3270b0eacbacfb52967406331ea75fa2.jpg">
-        <h5 className="vetClinicLogo"> Całodobowa Klinika Weterynaryjna</h5>
-    </PhotoContainer>
+        <PhotoContainer url="https://www.worldatlas.com/r/w960-q80/upload/8b/72/3e/shutterstock-690150508.jpg">
+        <BootstrapButton>
+            Wypełnij formularz
+            <KeyboardArrowDownIcon fontSize="large"/>
+        
+        </BootstrapButton>
+        <Content marginTop="30px" marginBottom="10px">
+        <Logo />
+        </Content>
+
+        </PhotoContainer>
     <Form/>
     </>
 }
