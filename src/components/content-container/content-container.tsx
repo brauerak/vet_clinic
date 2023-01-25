@@ -1,20 +1,22 @@
-import Logo from "../../components/logo/logo";
-import BootstrapButton from "../../styled/buttons/btn-boostrap";
 import { Container } from "../../styled/container/container";
-import { Content } from "../../styled/content/content";
 import { ContentText } from "../../styled/content/contentText";
-import { PhotoContainer } from "../../styled/photo-container/photo-container";
 
-const ContactView: React.FC = () => {
+const ContentContainer: React.FC = () => {
   return (
-    <>
-      <PhotoContainer url="https://www.worldatlas.com/r/w960-q80/upload/8b/72/3e/shutterstock-690150508.jpg">
-        <BootstrapButton>Skontaktuj się z nami</BootstrapButton>
-        <Content marginTop="30px" marginBottom="10px">
-          <Logo />
-        </Content>
-      </PhotoContainer>
-      <Container>
+    <Container>
+      <ContentText fontSize="2rem" fontWeight="300" color="black">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+        praesentium quidem obcaecati inventore in, accusamus veniam, libero a
+        hic sint sunt consectetur beatae tenetur eius deserunt! Ratione id nobis
+        laboriosam.
+      </ContentText>
+
+      <ContentText fontSize="2rem" fontWeight="300" color="black">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+        praesentium quidem obcaecati inventore in, accusamus veniam, libero a
+        hic sint sunt consectetur beatae tenetur eius deserunt! Ratione id nobis
+        laboriosam.
+      </ContentText>
       <ContentText fontSize="1.5rem" fontWeight="300" color="black">
         <ContentText fontSize="1.5rem" fontWeight="300" color="black">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
@@ -29,9 +31,8 @@ const ContactView: React.FC = () => {
           asperiores voluptates!
         </ContentText>
       </ContentText>
-      </Container>
-    </>
+    </Container>
   );
 };
 
-export default ContactView;
+export default ContentContainer;
