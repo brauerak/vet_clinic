@@ -21,10 +21,9 @@ const Form: React.FC = () => {
 
   return (
     <>
-        <form id="formId" className="form" noValidate onSubmit={handleSubmit(onSubmit)}>
-          <div className="name">
-            <label htmlFor="name"></label>
-            <input
+        <form id="formId" className="form__group" noValidate onSubmit={handleSubmit(onSubmit)}>
+          <div className="field">
+            <input className="form__field"
               id="name"
               type="text"
               placeholder="Imię"
@@ -43,11 +42,12 @@ const Form: React.FC = () => {
                 },
               })}
             />
-            {errors.name?.message}
+              <label className="form__label" htmlFor="name">Imię</label>
+
+            <p className="errors">{errors.name?.message}</p>
           </div>
-          <div className="surname">
-            <label htmlFor="surname"></label>
-            <input
+          <div className="form__group field">
+            <input className="form__field"
               id="surname"
               type="text"
               placeholder="Nazwisko"
@@ -66,12 +66,13 @@ const Form: React.FC = () => {
                 },
               })}
             />
-            <p>{errors.surname?.message}</p>
+             <label className="form__label" htmlFor="surname">Nazwisko</label>
+
+            <p className="errors">{errors.surname?.message}</p>
           </div>
         
-          <div>
-              <label htmlFor="petsName"></label>
-              <input
+          <div className="form__group field">
+              <input className="form__field"
                 id="petsName"
                 type="text"
                 placeholder="Imię zwierzęcia"
@@ -91,11 +92,12 @@ const Form: React.FC = () => {
                   },
                 })}
               />
-              <p>{errors.petsName?.message}</p>
+              <label className="form__label" htmlFor="petsName">Imię pupila</label>
+
+              <p className="errors">{errors.petsName?.message}</p>
               </div>
-              <div>
-              <label htmlFor="date"></label>
-              <input
+              <div className="form__group field">
+              <input className="form__field"
                 type="date"
                 id="date"
                 {...register("date", {
@@ -105,12 +107,13 @@ const Form: React.FC = () => {
                   },
                 })}
               />
-              <p>{errors.date?.message}</p>
+              <label className="form__label" htmlFor="date">Data wizyty</label>
+
+              <p className="errors">{errors.date?.message}</p>
           </div>
 
-          <div>
-            <label htmlFor="phoneNumber"></label>
-            <input
+          <div className="form__group field">
+            <input className="form__field"
               id="phoneNumber"
               type="text"
               placeholder="Numer kom."
@@ -136,12 +139,14 @@ const Form: React.FC = () => {
                   }}
               })}
             />
-            <p>{errors.phoneNumber?.message}</p>
+            <label className="form__label" htmlFor="phoneNumber">Numer kontaktowy</label>
+
+            <p className="errors">{errors.phoneNumber?.message}</p>
             </div>
             
-            <div>  
-            <label htmlFor="email"></label>
-            <input
+            <div className="form__group field">  
+
+            <input className="form__field"
               id="email"
               type="email"
               placeholder="E-mail"
@@ -163,11 +168,11 @@ const Form: React.FC = () => {
                 }
               })}
             />
-            <p>{errors.email?.message}</p>
+            <label className="form__label" htmlFor="email">E-mail</label>            
+            <p className="errors">{errors.email?.message}</p>
           </div>
-          <div>
-            <label htmlFor="info"></label>
-            <textarea
+          <div className="form__group field">
+            <input type="text" className="form__field"
               id="info"
               placeholder="Wpisz objawy, problemy, dodatkowe informacje"
               {...register("info", {
@@ -176,7 +181,9 @@ const Form: React.FC = () => {
                   message: "Pole jest wymagane",
                 },
               })}
-            ></textarea>
+            ></input>
+            <label className="form__label" htmlFor="info">Wpisz objawy i dodatkowe informacje</label>
+
           </div>
           <div>
             <button type="submit">Wyślij</button>
